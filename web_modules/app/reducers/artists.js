@@ -15,13 +15,13 @@ const format = (data) => {
 
 // redux reducer
 export default function reducer(state = initialState, action) {
-
     switch (action.type) {
 
     case GET:
         return {
             loading:true
         }
+
     case SET:
         return {
             ...format(action.response.artists)
