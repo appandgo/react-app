@@ -13,6 +13,7 @@ export default class PageHome extends Component {
     fetchJSON(consts.api.enpoints.getKinds()).then((response) => {
         if(!response.error){
           this.setState({kinds:response.genres})
+          console.log(response);
         }
     });
   };
@@ -27,7 +28,7 @@ export default class PageHome extends Component {
       <div>
         <InputList title="Kind"
               items={this.state.kinds}
-              limit={10} />
+              limit={5} />
       </div>
     )
   }
