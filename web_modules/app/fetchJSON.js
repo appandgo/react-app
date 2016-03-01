@@ -3,7 +3,6 @@ const catchError= (exception) =>{
 }
 
 export default (url, data) => fetch(url, data).then((res) => {
-
     // for both http ok/not ok, we try to parse as JSON
     // or reject if json parsing failed
     // http OK
@@ -16,5 +15,5 @@ export default (url, data) => fetch(url, data).then((res) => {
 
     // http not ok
     return new Promise((resolve, reject) => res.json().then(catchError))
-    
+
 }, catchError)

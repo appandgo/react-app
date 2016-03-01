@@ -15,13 +15,13 @@ const format = (data) => {
 
 // redux reducer
 export default function reducer(state = initialState, action) {
+
     switch (action.type) {
 
     case GET:
         return {
             loading:true
         }
-
     case SET:
         return {
             ...format(action.response.artists)
@@ -52,7 +52,7 @@ export function get(name) {
             ERROR,
         ],
         promise: (
-            fetchJSON(consts.api.enpoints.getSearch(name,"artist"), {
+            fetchJSON(consts.api.enpoints.getSearch(name,"person"), {
                 method: "GET"
             })
         )

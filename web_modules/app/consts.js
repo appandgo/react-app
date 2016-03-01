@@ -10,7 +10,7 @@ export default {
     enpoints:{
 
       getSearch:(query, type)=>{
-        return api_path+`search/${type}/`+api_key_formated+`?query=${query}`;
+        return api_path+`search/${type}/`+api_key_formated+`&query=${query}`;
       },
 
       getKinds: () =>{
@@ -19,10 +19,6 @@ export default {
 
       getMoviesbyKind: (kind) =>{
         return api_path+`genre/${kind}/movies/`+api_key_formated;
-      }
-
-      getArtists: ()=>{
-        return api_path`person/popular`+api_key_formated;
       }
 
     }
